@@ -6,6 +6,17 @@
         <item name="colorPrimary">@color/colorPrimary</item>
         <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme.ToolBar.Base" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="android:textColorPrimary">@color/colorPrimaryDark</item>
+        <item name="android:textSize">17sp</item>
+    </style>
+    <!-- toolbar菜单样式 -->
+    <style name="ToolbarTheme" parent="@style/ThemeOverlay.AppCompat.ActionBar">
+        <item name="android:textColorPrimary">@android:color/white</item>
     </style>
 
 </resources>

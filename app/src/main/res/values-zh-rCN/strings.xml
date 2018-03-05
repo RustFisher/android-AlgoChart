@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">动画算法</string>
+    <string name="project_address">项目地址</string>
+    <string name="select_algo">选择</string>
+    <string name="buffer_algo">冒泡</string>
+    <string name="insert_address">插入</string>
+</resources>
