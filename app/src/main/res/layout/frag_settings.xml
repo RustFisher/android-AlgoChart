@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/pageBgCommon"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        style="@style/SettingsItemField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/speed_tv"
+            style="@style/SettingsItemContentTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/play_speed_tv" />
+
+        <LinearLayout
+            style="@style/SettingsItemContent"
+            android:layout_below="@id/speed_tv">
+
+            <ImageView
+                style="@style/SettingsItemContentIcon"
+                android:src="@drawable/ic_speed_circle_gray" />
+
+            <SeekBar
+                android:id="@+id/speed_sb"
+                style="@style/SettingsItemSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <include layout="@layout/item_divider_1" />
+
+    <RelativeLayout
+        style="@style/SettingsItemField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/number_array_size_tv"
+            style="@style/SettingsItemContentTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/number_array_size_tv" />
+
+        <LinearLayout
+            style="@style/SettingsItemContent"
+            android:layout_below="@id/number_array_size_tv">
+
+            <ImageView
+                style="@style/SettingsItemContentIcon"
+                android:src="@drawable/ic_array_gray" />
+
+            <SeekBar
+                android:id="@+id/number_array_size_sb"
+                style="@style/SettingsItemSeekBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <include layout="@layout/item_divider_1" />
+
+    <RelativeLayout
+        style="@style/SettingsItemField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/chart_type_tv"
+            style="@style/SettingsItemContentTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/chart_type" />
+
+        <RadioGroup
+            android:id="@+id/style_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/chart_type_tv"
+            android:layout_marginEnd="12dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/dot_style_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dot_chart"
+                android:textColor="#000" />
+
+            <RadioButton
+                android:id="@+id/bar_style_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="@string/bar_chart"
+                android:textColor="#000" />
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <include layout="@layout/item_divider_1" />
+
+</LinearLayout>

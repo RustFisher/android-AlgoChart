@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">动画算法</string>
-    <string name="project_address">项目地址</string>
-    <string name="select_algo">选择</string>
-    <string name="buffer_algo">冒泡</string>
-    <string name="insert_address">插入</string>
+    <string name="app_name">算法图表</string>
+    <string name="selection_sort">选择排序</string>
+    <string name="insertion_sort">插入排序</string>
+    <string name="shell_sort">希尔排序</string>
+    <string name="quick_sort">快速排序</string>
+    <string name="top_bottom_merge_sort">自顶向下归并排序</string>
+    <string name="bottom_top_merge_sort">自底向上归并排序</string>
+    <string name="settings">设置</string>
+    <string name="about">关于</string>
+    <string name="about_content">演示一些算法的运算过程</string>
+    <string name="github_url_title">Github地址</string>
+    <string name="play_speed_tv">播放速度</string>
+    <string name="number_array_size_tv">数字数组大小</string>
+    <string name="chart_type">图表类型</string>
+    <string name="dot_chart">点图</string>
+    <string name="bar_chart">柱形图</string>
+    <string name="note">说明</string>
 </resources>

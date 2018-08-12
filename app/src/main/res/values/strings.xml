@@ -1,4 +1,33 @@
 <resources>
-    <string name="app_name">AnimationAlgorithm</string>
-    <string name="project_address">github link</string>
+    <string name="app_name">AlgoChart</string>
+    <string name="selection_sort">Selection Sort</string>
+    <string name="insertion_sort">Insertion Sort</string>
+    <string name="shell_sort">Shell Sort</string>
+    <string name="quick_sort">Quick Sort</string>
+    <string name="top_bottom_merge_sort">Top Bottom Merge Sort</string>
+    <string name="bottom_top_merge_sort">Bottom Top Merge Sort</string>
+    <string name="lc_26_title">Remove Duplicates from Sorted Array</string>
+    <string name="settings">Settings</string>
+    <string name="about">About</string>
+    <string name="about_content">Show some progress of algorithm</string>
+    <string name="github_url_title">Github URL</string>
+    <string name="github_url">https://github.com/RustFisher/android-AlgoChart</string>
+    <string name="play_speed_tv">Play Speed</string>
+    <string name="number_array_size_tv">Number Array Size</string>
+    <string name="chart_type">Chart Type</string>
+    <string name="dot_chart">Dot</string>
+    <string name="bar_chart">Bar</string>
+    <string name="note">Note</string>
+    <string name="title_java">Java</string>
+
+    <string name="license_note">   Copyright [Rust Fisher]\n\n
+   Licensed under the Apache License, Version 2.0 (the "License");
+   you may not use this file except in compliance with the License.
+   You may obtain a copy of the License at\n\n
+       http://www.apache.org/licenses/LICENSE-2.0\n\n
+   Unless required by applicable law or agreed to in writing, software
+   distributed under the License is distributed on an "AS IS" BASIS,
+   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+   See the License for the specific language governing permissions and
+   limitations under the License.</string>
 </resources>

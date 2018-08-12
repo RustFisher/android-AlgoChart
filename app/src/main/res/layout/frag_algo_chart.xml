@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/algo_main_bg">
+
+    <LinearLayout
+        android:id="@+id/chart_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/mini_chart_field"
+            android:layout_width="match_parent"
+            android:layout_height="42dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/shape_round_4_white"
+            android:padding="2dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:id="@+id/show_big_chart_iv"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="2dp"
+                android:layout_marginTop="2dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_unfold_arrow_down_white" />
+
+            <com.rustfisher.animationalgorithm.view.DotBarChart
+                android:id="@+id/mini_chart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_toStartOf="@id/show_big_chart_iv" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/algo_chart_field"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="12dp"
+            android:layout_marginStart="12dp"
+            android:background="@drawable/shape_round_top_white"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/hide_chart_iv"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_gravity="end"
+                android:layout_marginEnd="4dp"
+                android:layout_marginTop="4dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_fold_arrow_up_white" />
+
+            <com.rustfisher.animationalgorithm.view.DotBarChart
+                android:id="@+id/dbc1"
+                android:layout_width="match_parent"
+                android:layout_height="130dp" />
+
+            <RadioGroup
+                android:id="@+id/style_group"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_style_rg_bg"
+                android:orientation="horizontal"
+                android:paddingBottom="4dp"
+                android:paddingTop="4dp">
+
+                <RadioButton
+                    android:id="@+id/dot_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/dot_chart"
+                    android:textColor="#fff" />
+
+                <RadioButton
+                    android:id="@+id/bar_style"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/bar_chart"
+                    android:textColor="#fff" />
+
+            </RadioGroup>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_style_rg_bg"
+                android:gravity="center_vertical"
+                android:paddingBottom="6dp"
+                android:paddingEnd="6dp"
+                android:paddingStart="6dp"
+                android:paddingTop="6dp">
+
+                <ImageView
+                    style="@style/SettingsItemContentIcon"
+                    android:contentDescription="@string/settings"
+                    android:src="@drawable/ic_speed_circle_white" />
+
+                <SeekBar
+                    android:id="@+id/speed_sb"
+                    style="@style/SettingsItemSeekBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/play_field"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="8dp"
+        android:paddingBottom="4dp"
+        android:paddingTop="4dp">
+
+        <ImageView
+            android:id="@+id/play_iv"
+            android:layout_width="@dimen/algo_play_ic_size"
+            android:layout_height="@dimen/algo_play_ic_size"
+            android:layout_centerInParent="true"
+            android:layout_marginEnd="24dp"
+            android:layout_marginStart="24dp"
+            android:background="@drawable/shape_icon_circle"
+            android:padding="12dp"
+            android:src="@drawable/ic_media_play" />
+
+        <ImageView
+            android:id="@+id/pre_iv"
+            android:layout_width="@dimen/algo_play_ic_size"
+            android:layout_height="@dimen/algo_play_ic_size"
+            android:layout_centerHorizontal="true"
+            android:layout_toStartOf="@id/play_iv"
+            android:padding="12dp"
+            android:src="@drawable/ic_media_previous" />
+
+        <ImageView
+            android:id="@+id/next_iv"
+            android:layout_width="@dimen/algo_play_ic_size"
+            android:layout_height="@dimen/algo_play_ic_size"
+            android:layout_centerHorizontal="true"
+            android:layout_toEndOf="@id/play_iv"
+            android:padding="12dp"
+            android:src="@drawable/ic_media_next" />
+
+    </RelativeLayout>
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/play_field"
+        android:layout_below="@id/chart_field" />
+
+</RelativeLayout>

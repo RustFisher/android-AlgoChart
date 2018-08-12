@@ -1,38 +1,49 @@
 package com.rustfisher.animationalgorithm.algo.sort;
 
-import android.graphics.Color;
 
-
+import com.rustfisher.animationalgorithm.R;
 import com.rustfisher.animationalgorithm.algo.AlgoStepSlice;
-import com.rustfisher.animationalgorithm.algo.BaseSort;
+import com.rustfisher.animationalgorithm.algo.BaseAlgo;
+import com.rustfisher.animationalgorithm.algo.ContentInfo;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-public class SelectionSort extends BaseSort {
+public class SelectionSort extends BaseAlgo {
 
     public static List<AlgoStepSlice> selectSort(int a[]) {
         List<AlgoStepSlice> stepEntities = new ArrayList<>();
         int N = a.length;
-        stepEntities.add(new AlgoStepSlice(a.clone()));
+        stepEntities.add(new AlgoStepSlice(a));
         for (int i = 0; i < N; i++) {
             int min = i;
             for (int j = i + 1; j < N; j++) {
                 if (less(a[j], a[min])) min = j;
             }
-            markDot(a, stepEntities, i, min);
+            markDots(a, stepEntities, min, i);
             exch(a, i, min);
-            markDot(a, stepEntities, i, min);
-
+            markDots(a, stepEntities, min, i);
         }
         return stepEntities;
     }
 
-    private static void markDot(int[] a, List<AlgoStepSlice> stepEntities, int i, int min) {
-        AlgoStepSlice algoStepSlice = new AlgoStepSlice(a.clone());
-        algoStepSlice.addMarkData(i, Color.RED);
-        algoStepSlice.addMarkData(min, Color.YELLOW);
-        stepEntities.add(algoStepSlice);
+    @Override
+    public Map<ContentInfo, ContentInfo> getDescMap() {
+        Map<ContentInfo, ContentInfo> map = new HashMap<>();
+        map.put(new ContentInfo(R.string.title_java),
+                new ContentInfo(
+                        "        public static void selectionSort(int a[]) {\n" +
+                                "            int N = a.length;\n" +
+                                "            for (int i = 0; i < N; i++) {\n" +
+                                "                int min = i;\n" +
+                                "                for (int j = i + 1; j < N; j++) {\n" +
+                                "                    if (less(a[j], a[min])) min = j;\n" +
+                                "                }\n" +
+                                "                exch(a, i, min);\n" +
+                                "            }\n" +
+                                "        }"));
+        return map;
     }
-
 }

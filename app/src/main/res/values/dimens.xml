@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="progress_bar_demo_item_height">40dp</dimen>
     <dimen name="algo_play_ic_size">42dp</dimen>
+    <dimen name="algo_item_card_bg_corner">6dp</dimen>
 </resources>
