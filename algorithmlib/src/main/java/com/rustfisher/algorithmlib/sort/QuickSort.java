@@ -57,8 +57,7 @@ public class QuickSort extends BaseAlgo {
 
     @Override
     public Map<ContentInfo, ContentInfo> getDescMap() {
-        Map<ContentInfo, ContentInfo> map = new HashMap<>();
-        map.put(new ContentInfo(R.string.title_java),
+        baseDescMap.put(new ContentInfo(R.string.title_java),
                 new ContentInfo(
                         "    public static void quickSort(int[] a) {\n" +
                                 "        quickSort(a, 0, a.length - 1);\n" +
@@ -80,7 +79,6 @@ public class QuickSort extends BaseAlgo {
                                 "        quickSort(a, lo, lt - 1);\n" +
                                 "        quickSort(a, gt + 1, hi);\n" +
                                 "    }\n"));
-        map.put(new ContentInfo(R.string.note), new ContentInfo(R.string.quick_sort));
-        return map;
+        return baseDescMap;
     }
 }

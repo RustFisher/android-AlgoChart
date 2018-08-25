@@ -17,6 +17,9 @@
     <string name="chart_type">Chart Type</string>
     <string name="dot_chart">Dot</string>
     <string name="bar_chart">Bar</string>
+    <string name="chart_size">Chart Size</string>
+    <string name="size_normal">Normal</string>
+    <string name="size_mini">Mini</string>
     <string name="note">Note</string>
     <string name="title_java">Java</string>
 

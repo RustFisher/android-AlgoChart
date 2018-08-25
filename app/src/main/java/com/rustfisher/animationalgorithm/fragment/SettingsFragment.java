@@ -22,6 +22,7 @@ public class SettingsFragment extends Fragment {
     SeekBar mSpeedPercentSb;
     SeekBar mNumberArraySizeSb;
     RadioGroup mChartTypeRg;
+    RadioGroup mChartSizeRg;
 
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
@@ -40,6 +41,7 @@ public class SettingsFragment extends Fragment {
         mSpeedPercentSb = view.findViewById(R.id.speed_sb);
         mNumberArraySizeSb = view.findViewById(R.id.number_array_size_sb);
         mChartTypeRg = view.findViewById(R.id.style_group);
+        mChartSizeRg = view.findViewById(R.id.chart_size_radio_group);
 
         mSpeedPercentSb.setProgress(AppSettings.getPlaySpeedPercent(getActivity()));
         mSpeedPercentSb.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
@@ -94,6 +96,30 @@ public class SettingsFragment extends Fragment {
                         break;
                     case R.id.bar_style_rb:
                         AppSettings.saveChartType(getActivity(), DotBarChart.TYPE.BAR);
+                        break;
+                }
+            }
+        });
+
+        RadioButton sizeNormalRb = view.findViewById(R.id.normal_size_rb);
+        RadioButton sizeMiniRb = view.findViewById(R.id.mini_size_rb);
+        switch (AppSettings.getChartSizeType(getActivity())) {
+            case AppSettings.CHART_SIZE_MINI:
+                sizeMiniRb.setChecked(true);
+                break;
+            case AppSettings.CHART_SIZE_NORMAL:
+                sizeNormalRb.setChecked(true);
+                break;
+        }
+        mChartSizeRg.setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+                switch (checkedId) {
+                    case R.id.normal_size_rb:
+                        AppSettings.saveChartSizeType(getActivity(), AppSettings.CHART_SIZE_NORMAL);
+                        break;
+                    case R.id.mini_size_rb:
+                        AppSettings.saveChartSizeType(getActivity(), AppSettings.CHART_SIZE_MINI);
                         break;
                 }
             }

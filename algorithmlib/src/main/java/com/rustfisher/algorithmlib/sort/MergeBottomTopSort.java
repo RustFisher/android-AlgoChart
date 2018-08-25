@@ -35,8 +35,7 @@ public class MergeBottomTopSort extends BaseMergeSort {
 
     @Override
     public Map<ContentInfo, ContentInfo> getDescMap() {
-        Map<ContentInfo, ContentInfo> map = new HashMap<>();
-        map.put(new ContentInfo(R.string.title_java), new ContentInfo(
+        baseDescMap.put(new ContentInfo(R.string.title_java), new ContentInfo(
                 "    public static void mergeSortBU(int a[]) {\n" +
                         "        int N = a.length;\n" +
                         "        for (int sz = 1; sz < N; sz = sz + sz) {\n" +
@@ -47,6 +46,6 @@ public class MergeBottomTopSort extends BaseMergeSort {
                         "        }\n" +
                         "    }"
         ));
-        return map;
+        return baseDescMap;
     }
 }

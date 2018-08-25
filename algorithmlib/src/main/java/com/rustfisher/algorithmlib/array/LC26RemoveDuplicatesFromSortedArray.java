@@ -39,7 +39,8 @@ public class LC26RemoveDuplicatesFromSortedArray extends BaseAlgo {
     @Override
     public Map<ContentInfo, ContentInfo> getDescMap() {
         baseDescMap = new HashMap<>();
-        baseDescMap.put(new ContentInfo("Description"), new ContentInfo("Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.\n" +
+        baseDescMap.put(new ContentInfo("Description"), new ContentInfo("26. Remove Duplicates from Sorted Array\n\n" +
+                "Given a sorted array nums, remove the duplicates in-place such that each element appear only once and return the new length.\n" +
                 "\n" +
                 "Do not allocate extra space for another array, you must do this by modifying the input array in-place with O(1) extra memory.\n" +
                 "\n" +
@@ -75,7 +76,7 @@ public class LC26RemoveDuplicatesFromSortedArray extends BaseAlgo {
                 "}"));
 
         baseDescMap.put(new ContentInfo("Java 1"), new ContentInfo(
-                "    public int removeDuplicates(int[] nums) {\n" +
+                "public int removeDuplicates(int[] nums) {\n" +
                         "    if (nums.length == 0) return 0;\n" +
                         "    int i = 0;\n" +
                         "    for (int j = 1; j < nums.length; j++) {\n" +
@@ -85,7 +86,7 @@ public class LC26RemoveDuplicatesFromSortedArray extends BaseAlgo {
                         "        }\n" +
                         "    }\n" +
                         "    return i + 1;\n" +
-                        "}\n"));
+                        "}"));
         return baseDescMap;
     }
 }

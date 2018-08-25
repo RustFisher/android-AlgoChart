@@ -31,8 +31,7 @@ public class SelectionSort extends BaseAlgo {
 
     @Override
     public Map<ContentInfo, ContentInfo> getDescMap() {
-        Map<ContentInfo, ContentInfo> map = new HashMap<>();
-        map.put(new ContentInfo(R.string.title_java),
+        baseDescMap.put(new ContentInfo(R.string.title_java),
                 new ContentInfo(
                         "        public static void selectionSort(int a[]) {\n" +
                                 "            int N = a.length;\n" +
@@ -44,6 +43,6 @@ public class SelectionSort extends BaseAlgo {
                                 "                exch(a, i, min);\n" +
                                 "            }\n" +
                                 "        }"));
-        return map;
+        return baseDescMap;
     }
 }

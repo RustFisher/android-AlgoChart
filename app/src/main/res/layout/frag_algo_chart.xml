@@ -162,6 +162,8 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_above="@id/play_field"
-        android:layout_below="@id/chart_field" />
+        android:layout_below="@id/chart_field"
+        android:paddingEnd="12dp"
+        android:paddingStart="12dp" />
 
 </RelativeLayout>

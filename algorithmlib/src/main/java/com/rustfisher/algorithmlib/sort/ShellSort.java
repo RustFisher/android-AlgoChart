@@ -36,8 +36,7 @@ public class ShellSort extends BaseAlgo {
 
     @Override
     public Map<ContentInfo, ContentInfo> getDescMap() {
-        Map<ContentInfo, ContentInfo> map = new HashMap<>();
-        map.put(new ContentInfo(R.string.title_java),
+        baseDescMap.put(new ContentInfo(R.string.title_java),
                 new ContentInfo(
                         "    public static void shellSort(int a[]) {\n" +
                                 "        int N = a.length;\n" +
@@ -54,7 +53,7 @@ public class ShellSort extends BaseAlgo {
                                 "            h = h / 3;\n" +
                                 "        }\n" +
                                 "    }"));
-        return map;
+        return baseDescMap;
     }
 
 }

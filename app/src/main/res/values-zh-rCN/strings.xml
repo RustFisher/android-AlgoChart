@@ -5,8 +5,8 @@
     <string name="insertion_sort">插入排序</string>
     <string name="shell_sort">希尔排序</string>
     <string name="quick_sort">快速排序</string>
-    <string name="top_bottom_merge_sort">自顶向下归并排序</string>
-    <string name="bottom_top_merge_sort">自底向上归并排序</string>
+    <string name="top_bottom_merge_sort">归并排序-自顶向下</string>
+    <string name="bottom_top_merge_sort">归并排序-自底向上</string>
     <string name="settings">设置</string>
     <string name="about">关于</string>
     <string name="about_content">演示一些算法的运算过程</string>
@@ -17,4 +17,7 @@
     <string name="dot_chart">点图</string>
     <string name="bar_chart">柱形图</string>
     <string name="note">说明</string>
+    <string name="chart_size">图表大小</string>
+    <string name="size_normal">普通</string>
+    <string name="size_mini">迷你</string>
 </resources>

@@ -111,4 +111,46 @@
 
     <include layout="@layout/item_divider_1" />
 
+    <RelativeLayout
+        style="@style/SettingsItemField"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/chart_size_tv"
+            style="@style/SettingsItemContentTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/chart_size" />
+
+        <RadioGroup
+            android:id="@+id/chart_size_radio_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@id/chart_size_tv"
+            android:layout_marginEnd="12dp"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/normal_size_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/size_normal"
+                android:textColor="#000" />
+
+            <RadioButton
+                android:id="@+id/mini_size_rb"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:text="@string/size_mini"
+                android:textColor="#000" />
+
+        </RadioGroup>
+
+    </RelativeLayout>
+
+    <include layout="@layout/item_divider_1" />
+
 </LinearLayout>

@@ -2,4 +2,6 @@
 <resources>
     <dimen name="algo_play_ic_size">42dp</dimen>
     <dimen name="algo_item_card_bg_corner">6dp</dimen>
+    <dimen name="main_drawer_item_decoration_on_draw_margin_left">56dp</dimen>
+    <dimen name="main_drawer_item_decoration_on_draw_margin_right">12dp</dimen>
 </resources>

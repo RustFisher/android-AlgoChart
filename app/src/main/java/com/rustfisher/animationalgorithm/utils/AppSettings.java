@@ -21,6 +21,9 @@ public class AppSettings {
 
     private static final String K_CHART_TYPE = "key_chart_type";
 
+    private static final String K_CHART_SIZE_TYPE = "key_chart_size_type"; // 大小
+    public static final int CHART_SIZE_NORMAL = 0;
+    public static final int CHART_SIZE_MINI = 1;
 
     public static void savePlaySpeedPercent(Context context, int percent) {
         context.getSharedPreferences(SETTINGS_SP, Context.MODE_PRIVATE).edit()
@@ -60,6 +63,16 @@ public class AppSettings {
         int code = context.getSharedPreferences(SETTINGS_SP, Context.MODE_PRIVATE)
                 .getInt(K_CHART_TYPE, DotBarChart.TYPE.BAR.getCode());
         return DotBarChart.TYPE.getTypeByCode(code);
+    }
+
+    public static void saveChartSizeType(Context context, int sizeType) {
+        context.getSharedPreferences(SETTINGS_SP, Context.MODE_PRIVATE).edit()
+                .putInt(K_CHART_SIZE_TYPE, sizeType).apply();
+    }
+
+    public static int getChartSizeType(Context context) {
+        return context.getSharedPreferences(SETTINGS_SP, Context.MODE_PRIVATE)
+                .getInt(K_CHART_SIZE_TYPE, CHART_SIZE_NORMAL);
     }
 
 }

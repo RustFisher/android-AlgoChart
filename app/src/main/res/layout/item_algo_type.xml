@@ -3,15 +3,18 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/shape_algo_item_bg"
-    android:minHeight="60dp"
+    android:minHeight="42dp"
+    android:paddingBottom="12dp"
     android:paddingEnd="20dp"
-    android:paddingStart="20dp">
+    android:paddingStart="20dp"
+    android:paddingTop="8dp">
 
     <TextView
         android:id="@+id/name_tv"
         android:layout_width="wrap_content"
-        android:layout_height="42dp"
-        android:gravity="center"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="start"
         android:textColor="#fff"
         android:textSize="15sp" />
 

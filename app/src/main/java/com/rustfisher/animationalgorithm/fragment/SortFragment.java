@@ -165,10 +165,12 @@ public class SortFragment extends Fragment {
             public void onCheckedChanged(RadioGroup group, int checkedId) {
                 switch (checkedId) {
                     case R.id.bar_style:
+                        AppSettings.saveChartType(getActivity(), DotBarChart.TYPE.BAR);
                         mBigChart.setShowType(DotBarChart.TYPE.BAR);
                         mMiniChart.setShowType(DotBarChart.TYPE.BAR);
                         break;
                     case R.id.dot_style:
+                        AppSettings.saveChartType(getActivity(), DotBarChart.TYPE.DOT);
                         mBigChart.setShowType(DotBarChart.TYPE.DOT);
                         mMiniChart.setShowType(DotBarChart.TYPE.DOT);
                         break;
@@ -207,6 +209,15 @@ public class SortFragment extends Fragment {
                 Log.d(TAG, "window wid: " + mWindowWid);
             }
         });
+
+        switch (AppSettings.getChartSizeType(getActivity())) {
+            case AppSettings.CHART_SIZE_MINI:
+                changeBigMiniChart(false);
+                break;
+            case AppSettings.CHART_SIZE_NORMAL:
+                changeBigMiniChart(true);
+                break;
+        }
     }
 
     private void initTextPager(View view, BaseAlgo sort) {
@@ -327,9 +338,11 @@ public class SortFragment extends Fragment {
         if (showBig) {
             mChartField.setVisibility(View.VISIBLE);
             mMiniChartField.setVisibility(View.GONE);
+            AppSettings.saveChartSizeType(getActivity(), AppSettings.CHART_SIZE_NORMAL);
         } else {
             mChartField.setVisibility(View.GONE);
             mMiniChartField.setVisibility(View.VISIBLE);
+            AppSettings.saveChartSizeType(getActivity(), AppSettings.CHART_SIZE_MINI);
         }
     }
 }

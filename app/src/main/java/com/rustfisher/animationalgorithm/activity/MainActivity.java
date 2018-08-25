@@ -1,15 +1,18 @@
 package com.rustfisher.animationalgorithm.activity;
 
 import android.content.Intent;
+import android.content.res.Resources;
+import android.graphics.Canvas;
 import android.graphics.Color;
+import android.graphics.Paint;
 import android.graphics.Rect;
 import android.os.Bundle;
 import android.support.v4.view.GravityCompat;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.GridLayoutManager;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.StaggeredGridLayoutManager;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
@@ -51,18 +54,11 @@ public class MainActivity extends AppCompatActivity {
     private void initAlgoList() {
         RecyclerView aReView = findViewById(R.id.main_re_view);
         mAlgoReAdapter = new AlgoReAdapter();
-        for (int i = 1; i <= 7 ;i++) {
+        for (int i = 1; i <= AlgoStore.NUM_ARR.LC_26.getCode(); i++) {
             mAlgoReAdapter.addSortItem(AlgoStore.NUM_ARR.getNumberArrayType(i));
         }
-//        mAlgoReAdapter.addSortItem(AlgoStore.NUM_ARR.SELECT_SORT);
-//        mAlgoReAdapter.addSortItem(AlgoStore.NUM_ARR.INSERTION_SORT);
-//        mAlgoReAdapter.addSortItem(AlgoStore.NUM_ARR.SHELL_SORT);
-//        mAlgoReAdapter.addSortItem(AlgoStore.NUM_ARR.QUICK_SORT);
-//        mAlgoReAdapter.addSortItem(AlgoStore.NUM_ARR.MERGE_SORT_TOP_BOTTOM);
-//        mAlgoReAdapter.addSortItem(AlgoStore.NUM_ARR.MERGE_SORT_BOTTOM_TOP);
-//        mAlgoReAdapter.addSortItem(AlgoStore.NUM_ARR.LC_26);
         aReView.setAdapter(mAlgoReAdapter);
-        RecyclerView.LayoutManager layoutManager = new GridLayoutManager(this, 2);
+        RecyclerView.LayoutManager layoutManager = new StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL);
         aReView.setLayoutManager(layoutManager);
         mAlgoReAdapter.notifyDataSetChanged();
         mAlgoReAdapter.setOnItemListener(new AlgoReAdapter.OnItemListener() {
@@ -103,6 +99,34 @@ public class MainActivity extends AppCompatActivity {
                             startActivity(new Intent(getApplicationContext(), SettingsActivity.class));
                             break;
                     }
+                }
+            }
+        });
+        drawerRv.addItemDecoration(new RecyclerView.ItemDecoration() {
+            Paint mmDividerPaint = new Paint();
+            final int bottomOffset = 10;
+
+            @Override
+            public void getItemOffsets(Rect outRect, View view, RecyclerView parent, RecyclerView.State state) {
+                outRect.bottom = bottomOffset;
+            }
+
+            @Override
+            public void onDraw(Canvas c, RecyclerView parent, RecyclerView.State state) {
+                super.onDraw(c, parent, state);
+                Resources resources = parent.getResources();
+                int childCount = parent.getChildCount();
+                int left = parent.getPaddingLeft()
+                        + resources.getDimensionPixelOffset(R.dimen.main_drawer_item_decoration_on_draw_margin_left);
+                int right = parent.getWidth()
+                        - parent.getPaddingRight()
+                        - resources.getDimensionPixelOffset(R.dimen.main_drawer_item_decoration_on_draw_margin_right);
+                mmDividerPaint.setColor(resources.getColor(R.color.mainDrawerItemDivider));
+                for (int i = 0; i < childCount - 1; i++) {
+                    View view = parent.getChildAt(i);
+                    float top = view.getBottom();
+                    float bottom = view.getBottom() + bottomOffset / 2;
+                    c.drawRect(left, top, right, bottom, mmDividerPaint);
                 }
             }
         });

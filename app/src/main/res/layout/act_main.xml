@@ -39,19 +39,33 @@
         android:layout_height="match_parent"
         android:layout_gravity="start">
 
-        <ImageView
-            android:id="@+id/drawer_header_iv"
+        <FrameLayout
+            android:id="@+id/drawer_header_field"
             android:layout_width="match_parent"
-            android:layout_height="166dp"
-            android:scaleType="fitXY"
-            android:src="@drawable/pic_snow" />
+            android:layout_height="166dp">
+
+            <ImageView
+                android:id="@+id/drawer_header_iv"
+                android:layout_width="match_parent"
+                android:layout_height="166dp"
+                android:scaleType="fitXY"
+                android:src="@mipmap/pic_h3" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="12dp"
+                android:text="@string/app_name"
+                android:textColor="#fff" />
+
+        </FrameLayout>
 
         <android.support.v7.widget.RecyclerView
             android:id="@+id/drawer_rv"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_below="@id/drawer_header_iv"
-            android:background="@android:color/white"
+            android:layout_below="@id/drawer_header_field"
+            android:background="#eaeaea"
             android:clipToPadding="true"
             android:paddingTop="4dp" />
 

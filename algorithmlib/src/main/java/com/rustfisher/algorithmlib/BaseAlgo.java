@@ -3,9 +3,7 @@ package com.rustfisher.algorithmlib;
 
 import android.graphics.Color;
 
-import com.rustfisher.algorithmlib.AlgoStepSlice;
-import com.rustfisher.algorithmlib.ContentInfo;
-
+import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -16,7 +14,7 @@ public class BaseAlgo {
 
     public static int[] colors = new int[]{Color.RED, Color.YELLOW, Color.GREEN, Color.BLACK};
 
-    public Map<ContentInfo, ContentInfo> baseDescMap;
+    public Map<ContentInfo, ContentInfo> baseDescMap = new HashMap<>();
 
     public static void exch(int a[], int i, int j) {
         int t = a[i];
