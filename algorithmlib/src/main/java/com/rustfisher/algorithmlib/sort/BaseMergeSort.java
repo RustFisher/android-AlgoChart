@@ -1,7 +1,7 @@
-package com.rustfisher.animationalgorithm.algo.sort;
+package com.rustfisher.algorithmlib.sort;
 
 
-import com.rustfisher.animationalgorithm.algo.BaseAlgo;
+import com.rustfisher.algorithmlib.BaseAlgo;
 
 /**
  * 自顶向下归并排序

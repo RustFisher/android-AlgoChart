@@ -1,4 +1,4 @@
-package com.rustfisher.animationalgorithm.algo;
+package com.rustfisher.algorithmlib;
 
 import java.io.Serializable;
 import java.util.Collections;

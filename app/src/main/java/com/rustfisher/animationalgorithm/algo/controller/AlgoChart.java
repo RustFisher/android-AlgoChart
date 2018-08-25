@@ -1,6 +1,6 @@
 package com.rustfisher.animationalgorithm.algo.controller;
 
-import com.rustfisher.animationalgorithm.algo.AlgoStepSlice;
+import com.rustfisher.algorithmlib.AlgoStepSlice;
 
 public interface AlgoChart {
 

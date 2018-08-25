@@ -4,7 +4,7 @@ import android.os.Handler;
 import android.os.Looper;
 import android.util.Log;
 
-import com.rustfisher.animationalgorithm.algo.AlgoStepSlice;
+import com.rustfisher.algorithmlib.AlgoStepSlice;
 
 import java.util.ArrayList;
 import java.util.List;

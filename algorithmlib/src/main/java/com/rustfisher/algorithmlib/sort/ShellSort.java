@@ -1,10 +1,10 @@
-package com.rustfisher.animationalgorithm.algo.sort;
+package com.rustfisher.algorithmlib.sort;
 
 
-import com.rustfisher.animationalgorithm.R;
-import com.rustfisher.animationalgorithm.algo.AlgoStepSlice;
-import com.rustfisher.animationalgorithm.algo.BaseAlgo;
-import com.rustfisher.animationalgorithm.algo.ContentInfo;
+import com.rustfisher.algorithmlib.AlgoStepSlice;
+import com.rustfisher.algorithmlib.BaseAlgo;
+import com.rustfisher.algorithmlib.ContentInfo;
+import com.rustfisher.algorithmlib.R;
 
 import java.util.ArrayList;
 import java.util.HashMap;

@@ -1,8 +1,8 @@
-package com.rustfisher.animationalgorithm.algo.leetcode.array;
+package com.rustfisher.algorithmlib.array;
 
-import com.rustfisher.animationalgorithm.algo.AlgoStepSlice;
-import com.rustfisher.animationalgorithm.algo.BaseAlgo;
-import com.rustfisher.animationalgorithm.algo.ContentInfo;
+import com.rustfisher.algorithmlib.AlgoStepSlice;
+import com.rustfisher.algorithmlib.BaseAlgo;
+import com.rustfisher.algorithmlib.ContentInfo;
 
 import java.util.ArrayList;
 import java.util.HashMap;

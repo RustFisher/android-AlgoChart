@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="insertion_sort">插入排序</string>
+    <string name="quick_sort">快速排序</string>
+    <string name="note">说明</string>
+</resources>
